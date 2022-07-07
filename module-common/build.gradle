@@ -1,0 +1,10 @@
+subprojects {
+
+    jar.enabled = true
+    bootJar.enabled = false
+
+    dependencies {
+        implementation 'com.amazonaws:aws-java-sdk-bom:1.12.253'
+        implementation 'com.amazonaws:aws-java-sdk-sqs:1.12.253'
+    }
+}

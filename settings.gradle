@@ -1,1 +1,10 @@
 rootProject.name = 'provider_sqs'
+include 'module-api'
+include 'module-common'
+include 'module-api:application-api'
+findProject(':module-api:application-api')?.name = 'application-api'
+include 'module-common:module-producer'
+findProject(':module-common:module-producer')?.name = 'module-producer'
+include 'module-common:module-consumer'
+findProject(':module-common:module-consumer')?.name = 'module-consumer'
+

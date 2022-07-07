@@ -1,4 +1,4 @@
-package com.example.provider_sqs;
+package com.jihun;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
@@ -11,8 +11,7 @@ import com.amazonaws.services.sqs.model.SendMessageRequest;
 
 import java.util.UUID;
 
-
-public class Client {
+public class Producer {
 
     private static final String QUEUE_NAME = "luman";
     private static final String ACCESS_KEY = "A~";
@@ -46,5 +45,4 @@ public class Client {
         sqs.sendMessageBatch(requestMulti);
         System.out.println("배치 요청 완료");
     }
-
 }
